@@ -101,7 +101,8 @@ export const proyectos = [
       titulo: "Sistema Web de Ventas e Inventario",
       empresa: "Proyecto Personal",
       etiqueta: "Full Stack | Laravel",
-      stack: ["PHP", "Laravel 12", "MySQL", "Blade", "Tailwind CSS 4", "JavaScript"],
+      imagen: "/Proyectos/Laravel-01.webp",
+      stack: ["PHP", "Laravel", "MySQL", "Blade", "Tailwind CSS", "JavaScript"],
       enlaces: [
         {
           nombre: "Ver código fuente",
@@ -124,7 +125,7 @@ export const proyectos = [
   {
     ...{
       id: 6,
-      categoria: "data",
+      categoria: "dev",
       titulo: "Automatización de Reportes",
       empresa: "J.R.Z. Ajustadores y Peritos de Seguros SAC",
       etiqueta: "ETL",
