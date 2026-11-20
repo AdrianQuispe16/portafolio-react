@@ -84,7 +84,7 @@ export default function SobreMi() {
                   <span>PDF</span>
                 </div>
                 <a
-                  href="cv-adrian-quispe.pdf"
+                  href="documents/CV Adrian Quispe.pdf"
                   download
                   className="btn btn-primary cv-btn"
                 >

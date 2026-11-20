@@ -9,6 +9,10 @@ export default function Proyectos() {
   const cantidad = proyectos.filter(
     (p) => filtro === "all" || p.categoria === filtro,
   ).length;
+  const cantidadDatos = proyectos.filter((p) => p.categoria === "data").length;
+  const cantidadDesarrollo = proyectos.filter(
+    (p) => p.categoria === "dev",
+  ).length;
 
   useEffect(() => {
     if (imagenActiva && modalRef.current && !modalRef.current.open) {
@@ -39,7 +43,7 @@ export default function Proyectos() {
                 onClick={() => setFiltro("all")}
                 aria-pressed={filtro === "all"}
               >
-                Todos <span className="count">6</span>
+                Todos <span className="count">{proyectos.length}</span>
               </button>
               <button
                 className={`filter-btn data ${filtro === "data" ? "active" : ""}`}
@@ -60,7 +64,7 @@ export default function Proyectos() {
                   <path d="M3 3v18h18" />
                   <path d="M7 14l4-4 4 4 5-5" />
                 </svg>
-                Análisis de Datos <span className="count">3</span>
+                Análisis de Datos <span className="count">{cantidadDatos}</span>
               </button>
               <button
                 className={`filter-btn dev ${filtro === "dev" ? "active" : ""}`}
@@ -81,7 +85,7 @@ export default function Proyectos() {
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
                 </svg>
-                Programación <span className="count">3</span>
+                Programación <span className="count">{cantidadDesarrollo}</span>
               </button>
             </div>
           </div>

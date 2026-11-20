@@ -126,21 +126,18 @@ export const proyectos = [
     ...{
       id: 6,
       categoria: "dev",
-      titulo: "Automatización de Reportes",
-      empresa: "J.R.Z. Ajustadores y Peritos de Seguros SAC",
-      etiqueta: "ETL",
-      stack: ["SQL", "ETL"],
-      enlaces: [
-        { nombre: "Enlace al proyecto", url: "" },
-        { nombre: "Enlace al código", url: "" },
-      ],
+      titulo: "Sistema de Gestión de Alumnos y Calificaciones",
+      empresa: "Proyecto de desarrollo",
+      etiqueta: "Desarrollo | Java",
+      imagen: "/Proyectos/Java-01.webp",
+      stack: ["Java"],
+      enlaces: [{ nombre: "Enlace al proyecto", url: "https://github.com/AdrianQuispe16/Sistema_Registro_Notas" }],
     },
     resultado: (
       <p className="project-result">
-        Automaticé la generación de reportes ejecutivos con{" "}
-        <strong>extracciones SQL programadas y procesos ETL</strong>, eliminando
-        el trabajo manual en Excel. Consultas complejas con JOIN, subconsultas y
-        GROUP BY.
+        Desarrollé un sistema CRUD en Java para registrar y administrar
+        <strong> alumnos y cursos</strong>, ingresar notas y consultar las
+        calificaciones.
       </p>
     ),
     extra: <></>,
