@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Adrian Quispe — Desarrollador Full Stack &amp; Analista de Datos
+    </title>
+    <meta
+      content="Desarrollador Full Stack y Analista de Datos en Lima, Perú. +2 años de experiencia. PHP, MySQL, JavaScript, Power BI, SQL, ETL."
+      name="description"
+    />
+    <meta content="#060A16" name="theme-color" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/webp" href="%BASE_URL%Logo/logo.webp" />
+    <script>
+      (function () {
+        try {
+          const saved = localStorage.getItem("theme");
+
+          const theme = saved || "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+          const meta = document.querySelector('meta[name="theme-color"]');
+          if (meta)
+            meta.setAttribute(
+              "content",
+              theme === "dark" ? "#060A16" : "#F4F7FD",
+            );
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

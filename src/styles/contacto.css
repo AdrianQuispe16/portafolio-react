@@ -1,0 +1,136 @@
+/* ============ CONTACTO ============ */
+.contact-section {
+  background: var(--contact-bg);
+  color: var(--contact-ink);
+  padding: 72px 0;
+  border-bottom: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
+}
+.contact-section .section-eyebrow {
+  color: var(--accent);
+}
+.contact-grid {
+  @apply grid;
+  grid-template-columns: 1.3fr 1fr;
+  @apply gap-[56px];
+  @apply items-center;
+}
+.contact-section h2 {
+  color: var(--contact-ink);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 14px;
+  @apply tracking-[-.02em];
+}
+.contact-section p {
+  color: var(--contact-muted);
+  @apply text-[15.5px];
+  margin-bottom: 28px;
+  @apply max-w-[460px];
+  line-height: 1.7;
+}
+.contact-actions {
+  @apply flex;
+  @apply gap-[10px];
+  @apply flex-wrap;
+}
+.contact-section .btn-primary {
+  background: var(--primary);
+  color: var(--bg);
+}
+.contact-section .btn-primary:hover {
+  background: var(--primary-2);
+  color: var(--bg);
+}
+.contact-section .btn-ghost {
+  background: transparent;
+  color: var(--contact-ink);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact-section .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--contact-ink);
+}
+.contact-section .btn-whatsapp {
+  color: var(--success);
+  border-color: color-mix(in srgb, var(--success) 38%, transparent);
+}
+.contact-section .btn-whatsapp:hover {
+  background: color-mix(in srgb, var(--success) 10%, transparent);
+  border-color: color-mix(in srgb, var(--success) 65%, transparent);
+  color: var(--success);
+}
+.contact-section .btn-github,
+.contact-section .btn-linkedin {
+  color: var(--contact-ink);
+  border-color: color-mix(in srgb, var(--primary) 38%, transparent);
+}
+.contact-section .btn-github:hover,
+.contact-section .btn-linkedin:hover {
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 65%, transparent);
+  color: var(--primary);
+}
+.contact-info {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-[12px];
+}
+.contact-info-row {
+  @apply flex;
+  @apply items-center;
+  @apply gap-[12px];
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  @apply rounded-[10px];
+  @apply text-[14px];
+  transition: all 0.3s ease;
+}
+.contact-info-row:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+.contact-info-row .lbl {
+  color: var(--contact-muted);
+  @apply text-[11.5px];
+  @apply font-semibold;
+  @apply uppercase;
+  @apply tracking-[.06em];
+  width: 70px;
+  @apply shrink-0;
+}
+.contact-info-row .val {
+  color: #fff;
+  @apply font-medium;
+}
+.contact-info-row a {
+  color: #fff;
+}
+.contact-info-row a:hover {
+  text-decoration: underline;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  padding: 32px 0;
+  background: var(--contact-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  @apply text-[13px];
+  color: var(--contact-muted);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: background-color 0.6s ease;
+}
+.footer-inner {
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+  @apply flex-wrap;
+  @apply gap-[16px];
+}

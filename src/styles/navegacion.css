@@ -1,0 +1,191 @@
+/* ============ NAV ============ */
+nav {
+  @apply sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--nav-border);
+  transition:
+    background-color 0.6s ease,
+    border-color 0.6s ease;
+}
+
+.nav-inner {
+  @apply max-w-[1080px];
+  margin: 0 auto;
+  padding: 14px 24px;
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+}
+
+.logo {
+  @apply flex;
+  @apply items-center;
+  @apply gap-[11px];
+  @apply font-bold;
+  @apply text-[15px];
+}
+
+.logo-mark {
+  @apply relative;
+  @apply block;
+  width: 48px;
+  height: 48px;
+  @apply shrink-0;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo:hover .logo-mark {
+  transform: scale(1.07);
+}
+
+.logo-glow {
+  @apply absolute;
+  inset: 0;
+  @apply w-full;
+  @apply h-full;
+  @apply pointer-events-none;
+  opacity: 0;
+  mix-blend-mode: screen;
+  transition: opacity 0.35s ease;
+}
+
+.logo.is-lit .logo-glow {
+  opacity: 1;
+}
+
+.logo.is-lit .logo-svg {
+  filter: drop-shadow(0 4px 18px rgba(34, 211, 238, 0.45));
+}
+
+.logo-svg {
+  @apply w-full;
+  @apply h-full;
+  @apply shrink-0;
+  filter: drop-shadow(0 4px 14px rgba(99, 102, 241, 0.35));
+  transition: filter 0.35s ease;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo small {
+  @apply text-[12.5px];
+  color: var(--muted);
+  @apply font-medium;
+  @apply block;
+  margin-top: -2px;
+}
+
+.nav-links {
+  @apply flex;
+  @apply gap-[4px];
+  @apply items-center;
+}
+
+.nav-links a {
+  @apply text-[14px];
+  @apply font-medium;
+  color: var(--muted);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+  padding: 8px 12px;
+  @apply rounded-[7px];
+  @apply relative;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+  background: var(--surface-2);
+}
+
+.nav-links a.active {
+  color: var(--ink);
+  @apply font-semibold;
+}
+
+.nav-links a.active::after {
+  content: "";
+  @apply absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 2px;
+  @apply rounded-[1px];
+  background: var(--ink);
+  animation: navSlideIn 0.4s ease-out;
+}
+
+.nav-links a[data-section="contacto"].active {
+  color: var(--ink);
+}
+
+.nav-links a[data-section="contacto"].active::after {
+  background: var(--ink);
+  opacity: 1;
+}
+
+.nav-links a.active.dev::after {
+  background: var(--primary);
+}
+
+.nav-links a.active.data::after {
+  background: var(--accent);
+}
+
+@keyframes navSlideIn {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  @apply rounded-[8px];
+  background: transparent;
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply cursor-pointer;
+  transition: all 0.3s ease;
+  @apply shrink-0;
+  margin-left: 4px;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-2);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle .icon-sun {
+  @apply hidden;
+}
+
+.theme-toggle .icon-moon {
+  @apply block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  @apply block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  @apply hidden;
+}

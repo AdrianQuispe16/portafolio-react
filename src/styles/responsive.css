@@ -1,0 +1,92 @@
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    @apply gap-[40px];
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    @apply gap-[32px];
+  }
+  .about-meta {
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .job {
+    grid-template-columns: 1fr;
+    @apply gap-[8px];
+  }
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid,
+  .soft-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    @apply gap-[36px];
+  }
+  .nav-links a {
+    @apply hidden;
+  }
+  .projects-header {
+    @apply flex-col;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 56px 0 48px;
+  }
+  section {
+    padding: 56px 0;
+  }
+  .skills-grid,
+  .soft-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-stats {
+    @apply gap-[24px];
+  }
+  .contenedor {
+    padding: 0 20px;
+  }
+  .logo small {
+    @apply hidden;
+  }
+  .filter-btn {
+    padding: 7px 12px;
+    @apply text-[12px];
+  }
+  .filter-btn .count {
+    @apply hidden;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

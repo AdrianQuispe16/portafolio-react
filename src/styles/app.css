@@ -1,0 +1,12 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./temas.css";
+@import "./base.css";
+@import "./navegacion.css";
+@import "./inicio.css";
+@import "./secciones.css";
+@import "./contacto.css";
+@import "./detalles.css";
+@import "./responsive.css";
+/* No Preflight: se conserva el reset y las medidas del diseño original. */
