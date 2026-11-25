@@ -12,6 +12,8 @@ import Formacion from "./sections/Formacion";
 import Habilidades from "./sections/Habilidades";
 import Contacto from "./sections/Contacto";
 import { useAnimacionesEntrada } from "./hooks/useAnimacionesEntrada";
+import { Analytics } from "@vercel/analytics/react";
+
 export default function App() {
   useAnimacionesEntrada();
   return (
@@ -29,6 +31,7 @@ export default function App() {
       <Habilidades />
       <Contacto />
       <PiePagina />
+      <Analytics />
     </>
   );
 }
